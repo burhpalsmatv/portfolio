@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>the library</title>
+    <link rel="stylesheet" href="../static/style.css" th:href="@{style.css}">
+</head>
+<body>
+
+<div id="container">
+    <div id="headerArea">
+        <div id="header" style="height: 150px;">
+            <video autoplay muted loop playsinline>
+                <source th:src="@{/img/header.mp4}"
+                        type="video/mp4">
+                Your browser does not support video.
+            </video>
+        </div>
+        <nav id="navbar" style="margin-bottom: 10px;">
+            <ul>
+                <li><a th:href="@{index}">Home</a></li>
+                <li><a th:href="@{#}">Vinyl Library</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div id="flex">
+
+        <main>
+            <h1>MY VINYL LIBRARY :3</h1>
+            <div class="vinylContainer">
+                <div class="vinylBox" th:each="vinyl : ${vinylList}">
+                    <img th:src="@{'/img/' + ${vinyl.img}}" alt="vinyl image"/>
+
+                    <div>
+                        <label>album name:</label>
+                        <span th:text="${vinyl.albumName}">album name</span>
+                    </div>
+
+                    <div>
+                        <label>artist name:</label>
+                        <span th:text="${vinyl.artistName}">artist name</span>
+                    </div>
+
+                    <div>
+                        <label>release year of album:</label>
+                        <span th:text="${vinyl.releaseYear}">release year</span>
+                    </div>
+
+                    <div>
+                        <label>thoughts abt album:</label>
+                        <span th:text="${vinyl.story}">my thoughts</span>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</body>
+</html>

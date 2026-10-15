@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ur home <3</title>
+    <link rel="stylesheet" href="../static/style.css" th:href="@{style.css}">
+</head>
+<body>
+
+<div id="container">
+    <div id="headerArea">
+        <div id="header" style="height: 150px;">
+            <video autoplay muted loop playsinline>
+                <source th:src="@{/img/header.mp4}"
+                        type="video/mp4">
+                Your browser does not support video.
+            </video>
+        </div>
+        <nav id="navbar" style="margin-bottom: 10px;">
+            <ul>
+                <li><a th:href="@{#}">Home</a></li>
+                <li><a th:href="@{vinylLibrary}">Vinyl Library</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="flex">
+
+        <main>
+            <h1>Welcome to my site :D!</h1>
+            <p><strong>lil info</strong></p>
+
+            <p>if u encounter any grammatical errors, no u didnt and if u get the urge to tell me, i refer to this
+                email: </p>
+            <p>iwillnotreadanyofthis@yopmail.com</p>
+            <p>i will add and update stuff to the website as i encounter them and when i come up with new stuff</p>
+            <p><i>Good artist copy, great artists steal</i> -Mattie</p>
+
+
+        </main>
+
+        <aside id="rightSidebar" style="margin-left: 10px;"><h2>Fun Facts and Random Thoughts</h2>
+            <div class="box">
+                <p>Fun Facts</p>
+                <ul style="padding-left:10px;">
+                    <li>Did u know there is a psychiatric disorder called Capgras Delusion, where u think ur kin have been replaced by imposters? EXCITING!</li>
+                </ul>
+
+                <p>Thoughts</p>
+                <ul style="padding-left:10px;">
+                    <li>i need to do my laundry</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+</div>
+</body>
+</html>
