@@ -32,7 +32,6 @@
             <div class="vinylContainer">
                 <div class="vinylBox" th:each="vinyl : ${vinylList}">
                     <img th:src="@{'/img/' + ${vinyl.img}}" alt="vinyl image"/>
-
                     <div>
                         <label>album name:</label>
                         <span th:text="${vinyl.albumName}">album name</span>
@@ -52,7 +51,6 @@
                         <label>thoughts abt album:</label>
                         <span th:text="${vinyl.story}">my thoughts</span>
                     </div>
-
                 </div>
             </div>
         </main>
