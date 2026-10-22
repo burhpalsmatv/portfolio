@@ -46,11 +46,10 @@
                         <label>release year of album:</label>
                         <span th:text="${vinyl.releaseYear}">release year</span>
                     </div>
-
-                    <div>
-                        <label>thoughts abt album:</label>
-                        <span th:text="${vinyl.story}">my thoughts</span>
-                    </div>
+                    <form th:action="@{/showVinyl}" th:method="get">
+                        <input type="hidden" name="id" th:value="${vinyl.getId}" placeholder="Enter id to read" required>
+                        <input type="image" th:src="@{'/img/Show_vinyl.png'}" alt="Submit">
+                    </form>
                 </div>
             </div>
         </main>

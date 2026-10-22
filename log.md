@@ -22,3 +22,16 @@ stuff i want to add:
 i think that's all i can think of for now. also dont come after me for grammar or not capitalizing my letters.
 i dont really care and when i do, i will go and find a solution to mass correct it (will high likely be some sort of macro or script or smth to automate it(this will bite me in the ass, but thats future me's problem))
 logging off for today...
+
+
+
+**22/10/2026**
+
+got this shit to work on my desktop after a long fight.
+i added a new database.sql file which will now be the new sql script, so use that one.
+
+i played some aram mayham to get a small break. i added a custom button that can show a single vinyl with the story attached and a custom go back button.
+and i reformated some shit on the page.
+- when go back, dont go back to top so u dont have to scroll down all the way again
+
+logging off for the day

@@ -1,5 +1,4 @@
 :root {
-    --body-bg-image: url("/Users/mattie2/Desktop/EK/semester-2/programmering/selvOpgaver/portfolio/src/main/resources/static/img/stars3.gif");
     --content: #43256E;
 }
 
@@ -203,6 +202,29 @@ strong {
     width: 100%;
 }
 
+.vinylShow {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.vinylShow a{
+    display: inline-block;
+    height: 35%;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    width: auto;
+}
+
+.vinylImage {
+    max-width: 40%;
+}
+
+label{
+    font-weight: bold;
+}
+
 .vinylBox {
     background-color: #13092D;
     border: 1px solid #ED64F5;
@@ -226,12 +248,27 @@ strong {
 }
 
 .vinylBox div {
-        width: 100%;
+    width: 100%;
 }
 
 .vinylBox label {
     font-weight: bold;
 }
+
+.vinylBox form {
+    display: inline-block;
+    height: 3%;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    width: auto;
+}
+.vinylBox form img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 
 /* CSS for extras */
 
