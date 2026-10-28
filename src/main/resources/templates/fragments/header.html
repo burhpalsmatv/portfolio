@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{style.css}">
+</head>
+<body>
+<div id="headerArea" th:fragment="header">
+    <div id="header" style="height: 150px;">
+        <video autoplay muted loop playsinline>
+            <source th:src="@{/img/header.mp4}"
+                    type="video/mp4">
+            Your browser does not support video.
+        </video>
+    </div>
+    <nav id="navbar" style="margin-bottom: 10px;">
+        <ul>
+            <li th:classappend="${module == 'index' ? 'active' : ''}">
+                <a th:href="@{/}">Home</a>
+            </li>
+            <li th:classappend="${module == 'vinylLibrary' ? 'active' : ''}">
+                <a th:href="@{vinylLibrary}">Vinyl Library</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+</body>
+</html>
