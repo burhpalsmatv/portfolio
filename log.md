@@ -35,3 +35,12 @@ and i reformated some shit on the page.
 - when go back, dont go back to top so u dont have to scroll down all the way again
 
 logging off for the day
+
+**28/10/2026**
+i did some minor edits in the sql script (i havent decided yet if i want to delete the "databasescript.sql" file)
+i am now gonna try and make the header as fragment.
+
+u can now go back to ur previous location after visiting a vinyl
+
+
+quick sesh, signing off
