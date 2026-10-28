@@ -4,16 +4,16 @@
 -- ------------------------------------------------------
 -- Server version	8.4.11
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT = @@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS = @@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION = @@COLLATION_CONNECTION */;
 /*!50503 SET NAMES utf8 */;
-/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
-/*!40103 SET TIME_ZONE='+00:00' */;
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+/*!40103 SET @OLD_TIME_ZONE = @@TIME_ZONE */;
+/*!40103 SET TIME_ZONE = '+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS = @@UNIQUE_CHECKS, UNIQUE_CHECKS = 0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS = @@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS = 0 */;
+/*!40101 SET @OLD_SQL_MODE = @@SQL_MODE, SQL_MODE = 'NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES = @@SQL_NOTES, SQL_NOTES = 0 */;
 drop database if exists portfolio;
 create database portfolio;
 use portfolio;
@@ -22,18 +22,21 @@ use portfolio;
 --
 
 DROP TABLE IF EXISTS `vinyls`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET @saved_cs_client = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `vinyls`
 (
-    `id`          int unsigned NOT NULL AUTO_INCREMENT,
+    `id`          int unsigned  NOT NULL AUTO_INCREMENT,
     `albumName`   varchar(250)  NOT NULL,
     `artistName`  varchar(250)  NOT NULL,
     `releaseYear` int           NOT NULL,
     `story`       varchar(1000) NOT NULL,
     `img`         varchar(300)  NOT NULL,
     PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE = InnoDB
+  AUTO_INCREMENT = 85
+  DEFAULT CHARSET = utf8mb4
+  COLLATE = utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -41,30 +44,47 @@ CREATE TABLE `vinyls`
 --
 
 LOCK
-TABLES `vinyls` WRITE;
-/*!40000 ALTER TABLE `vinyls` DISABLE KEYS */;
+    TABLES `vinyls` WRITE;
+/*!40000 ALTER TABLE `vinyls`
+    DISABLE KEYS */;
 INSERT INTO `vinyls`
 VALUES (1, 'Greatest Hits', 'Gramsespektrum', 1998,
         'i used to listen to this album everytime we drove to austria on ski vacation. my dad bought this for me, which i appreciate a lot, ty dad <3',
         'gramsespektrum.jpg'),
        (2, 'Sublunary', 'Sublunary', 2020,
-        'one of my bestest of friends are playing guitar. and it\'s limited so u cant get it >:3','sublunary.JPG'),(3,'Random Access Memories','Daft Punk',2013,'i think its the best album produced by daft punk. i got this in a hifi store for WAYYY too much... but lose urself to dance','randomaccess.jpg'),(4,'The Chronic','Dr. Dre',1992,'originally bought by my little brother but he doesnt listen to vinyls so i kinda stole it','chronic.jpg'),(5,'Heavy Is The Head','Stormzy',2019,'it has one of my other bestest friends favorite track (not rly but in boarding school he listened to it once and we decided it was now his favorite track)','heavyisthehead.jpg'),(6,'Starboy','The Weeknd',2016,'this album was originally bought by my brother but i stole it. i do however love the weeknd and i think he should\'ve won a grammy for with his After Hours album, which i will aquire in the future',
+        'one of my bestest of friends are playing guitar. and it\'s limited so u cant get it >:3. might be able to find at the library if ur lucky', 'sublunary.JPG'),
+       (3, 'Random Access Memories', 'Daft Punk', 2013,
+        'i think its the best album produced by daft punk. i got this in a hifi store for WAYYY too much... but lose urself to dance',
+        'randomaccess.jpg'),
+       (4, 'The Chronic', 'Dr. Dre', 1992,
+        'originally bought by my little brother but he doesnt listen to vinyls so i kinda stole it', 'chronic.jpg'),
+       (5, 'Heavy Is The Head', 'Stormzy', 2019,
+        'it has one of my other bestest friends favorite track (not rly but in boarding school he listened to it once and we decided it was now his favorite track)',
+        'heavyisthehead.jpg'),
+       (6, 'Starboy', 'The Weeknd', 2016,
+        'this album was originally bought by my brother but i stole it. i do however love the weeknd and i think he should\'ve won a grammy for with his After Hours album, which i will aquire in the future',
         'starboy.jpg'),
        (7, 'Electric Universe', 'Earth, Wind & Fire', 1983,
         'bought at a thrift store, mostly because my mom HATES earth wind and fire, so i thought it would be funny (does NOT contain september)',
         'electricuniverse.jpg'),
        (8, 'Fear Of A Black Planet', 'Public Enemy', 1990,
-        'one of my favorite albums out of the 90\'s hiphop scene. fight the power','fearof.jpg'),(9,'iridescence','Brockhampton',2018,'lwk their worst album,
+        'one of my favorite albums out of the 90\'s hiphop scene. fight the power', 'fearof.jpg'),
+       (9, 'iridescence', 'Brockhampton', 2018, 'lwk their worst album,
         but afaik,
         the only album u can get on vinyl (i could be wrong tho). but i love brockhampton too much to not get it. it does have some good songs on it but as a whole,
-        not the greatest work','iri.jpg'),(10,'ASTROWORLD','Travis Scott',2018,'mostly bought this because i thought it was funny (sicko mode)... STRAIGHT UP. does have some heavenly vocals on,
-        i wont hate. also carousel has frank ocean as a feature so i had to cop','astroworld.jpg'),(11,'Blank Face LP','ScHoolboy Q',2016,'shoutout q. it has some vince on it too and some anderson paak. didnt rlly know the album before i bought,
+        not the greatest work', 'iri.jpg'),
+       (10, 'ASTROWORLD', 'Travis Scott', 2018, 'mostly bought this because i thought it was funny (sicko mode)... STRAIGHT UP. does have some heavenly vocals on,
+        i wont hate. also carousel has frank ocean as a feature so i had to cop', 'astroworld.jpg'),
+       (11, 'Blank Face LP', 'ScHoolboy Q', 2016, 'shoutout q. it has some vince on it too and some anderson paak. didnt rlly know the album before i bought,
         but i had heard oxymoron,
-        which was AMAZING and planning on aquiring in the future','blankface.jpg'),(12,'Doris','Earl Sweatshitt',2013,'earl me boy,
+        which was AMAZING and planning on aquiring in the future', 'blankface.jpg'),
+       (12, 'Doris', 'Earl Sweatshitt', 2013, 'earl me boy,
         been following since oddfuture days. also one of my first vinyls ever,
-        love his monotone flow','doris.jpg'),(13,'good kid, m.A.A.d city','Kendrick Lamar',2012,'my first ever vinyl,
+        love his monotone flow', 'doris.jpg'),
+       (13, 'good kid, m.A.A.d city', 'Kendrick Lamar', 2012, 'my first ever vinyl,
         also AMAZING album. i remember hotboxing the ride listening to backseat freestyle and bitch dont kill my vibe,
-        amazing night. might also be on gta v radio iirc','goodkid.jpg'),(14,'Gedi Matjåp','Xtra Naan',2018,'my dad bought this for me too. i rly like the vinyl design,
+        amazing night. might also be on gta v radio iirc', 'goodkid.jpg'),
+       (14, 'Gedi Matjåp', 'Xtra Naan', 2018, 'my dad bought this for me too. i rly like the vinyl design,
         which is an eye. it\'s very disturbing, just the way i like it. so ty again dad <3', 'gedi.jpg'),
        (15, 'Raise!', 'Earth, Wind & Fire', 1981,
         'got this bcs my mom hates earth wind and fire, and it ALSO has lets groove, which is a banger. im still on the lookout for the album with september on, i believe they have only released it on like a \"greatest hits\" type compilation',
@@ -78,12 +98,22 @@ VALUES (1, 'Greatest Hits', 'Gramsespektrum', 1998,
        (18, 'Mm..Food', 'MF DOOM', 2004,
         'i REALLY wanted one beer on vinyl. i remember my early days on twitter where i had the album cover as a pfp and i had NO idea on who it was or what it was but i rly liked the visual artwork. also the start of me learning who this legend is',
         'mmfood.jpg'),
-       (19, 'Sgt. Pepper\'s Lonely Hearts Club Band','The Beatles',1967,'this is my favorite album they have produced,
-        mostly because i remember i once had to analyze lucy in the sky with diamonds and i fell in love with the alice in wonderland vibes','sgtpepper.jpg'),(20,'channel ORANGE','Frank Ocean',2012,'holy shit i fucking love frank ocean. i am on a quest on aquiring the last vinyl he has produced -> endless,
-        but shit is so expensive. one of my holy grails','channelorange.jpg'),(21,'Dear April','Frank Ocean',2019,'one of two of my first ever frank ocean vinyls. i am kinda pissed i never got the little demon before he recalled em,
-        but i also understand. im doubting if we\'ll ever get another frank album. also me and my first ex\'s song for some reason i dont rly remember tbh','dearapril.jpg'),(22,'Cayendo','Frank Ocean',2019,'one of two of my first ever frank on vinyl. i overpaid the shit out of the 2 singles AND i had to pay an insane amt in customs but idccccccc i needed em.','cayendo.jpg'),(23,'blonde','Frank Ocean',2016,'this is my holy grail so far. my favorite album of ALL time and imo THE BEST album ever produces... rly annoying LA type dudes will tell u he finessed the whole music industry,
+       (19, 'Sgt. Pepper\'s Lonely Hearts Club Band', 'The Beatles', 1967, 'this is my favorite album they have produced,
+        mostly because i remember i once had to analyze lucy in the sky with diamonds and i fell in love with the alice in wonderland vibes',
+        'sgtpepper.jpg'),
+       (20, 'channel ORANGE', 'Frank Ocean', 2012, 'holy shit i fucking love frank ocean. i am on a quest on aquiring the last vinyl he has produced -> endless,
+        but shit is so expensive. one of my holy grails', 'channelorange.jpg'),
+       (21, 'Dear April', 'Frank Ocean', 2019, 'one of two of my first ever frank ocean vinyls. i am kinda pissed i never got the little demon before he recalled em,
+        but i also understand. im doubting if we\'ll ever get another frank album. also me and my first ex\'s song for some reason i dont rly remember tbh',
+        'dearapril.jpg'),
+       (22, 'Cayendo', 'Frank Ocean', 2019,
+        'one of two of my first ever frank on vinyl. i overpaid the shit out of the 2 singles AND i had to pay an insane amt in customs but idccccccc i needed em.',
+        'cayendo.jpg'),
+       (23, 'blonde', 'Frank Ocean', 2016, 'this is my holy grail so far. my favorite album of ALL time and imo THE BEST album ever produces... rly annoying LA type dudes will tell u he finessed the whole music industry,
         which is true,
-        but the story has been told enough now','blonde.jpg'),(24,'Operation: Doomsday','MF DOOM',1999,'this was my second album i\'ve heard by mr doom. perchance my favorite one, only toppled by czarface meets metal face, but i dont own that one on vinyl so i dont wanna claim it',
+        but the story has been told enough now', 'blonde.jpg'),
+       (24, 'Operation: Doomsday', 'MF DOOM', 1999,
+        'this was my second album i\'ve heard by mr doom. perchance my favorite one, only toppled by czarface meets metal face, but i dont own that one on vinyl so i dont wanna claim it',
         'operationdoomsday.jpg'),
        (25, 'Circles', 'Mac Miller', 2020,
         'rest in peace mac. i am on a mission on aquiring all of his released vinyls. this one hits home and was 1 out of 2 albums that got me through my time in the psychiatric ward',
@@ -91,30 +121,56 @@ VALUES (1, 'Greatest Hits', 'Gramsespektrum', 1998,
        (26, 'Because the Internet', 'Childish Gambino', 2013,
         'i love the sound and visual artwork on this album. also a huge fangirl of mr gambino. did u know he got his artist name from a wutang name generator? (i had to). this is my second favorite album by him',
         'becausetheinternet.jpg'),
-       (27, 'Howl\'s Moving Castle Soundtrack','Joe Hisaishi',2004,'i was gifted this vinyl by a friend,
+       (27, 'Howl\'s Moving Castle Soundtrack', 'Joe Hisaishi', 2004, 'i was gifted this vinyl by a friend,
         it also happens to be one of my favorite miyazaki movies, only topped by nausicaa,
-        which im also hunting for the vinyl','howlsmovingcastle.jpg'),(28,'Sneglzilla','Malk De Koijn',2002,'made the same year i was born. i love the fun lyrics. if u dont understand danish,
-        good luck translating. i also remember using one of the tracks titles as a title for an essay i did in danish that i got graded really poorly on','sneglzilla.jpg'),(29,'Toback To The Fromtime','Malk De Koijn',2011,'i think my favorite track on this one is Nalk,
-        but also good luck translating if u dont understand danish.','toback.jpg'),(30,'loveless','my bloody valentine',1991,'if anyone tells u this is their favorite album,
-        run as fast as u can. but also a goated album if ur into like shoegaze or noise in general','loveless.jpg'),(31,'[α] & [β]','Hans Philip',2022,'im in love with his lyrics and voice on this album. very dreamy sounds. i got this the second it dropped','ab.jpg'),(32,'Cherry Bomb','Tyler,
-        The Creator',2015,'i think this is one of my favorite albums by tyler. some say its ass,
+        which im also hunting for the vinyl', 'howlsmovingcastle.jpg'),
+       (28, 'Sneglzilla', 'Malk De Koijn', 2002, 'made the same year i was born. i love the fun lyrics. if u dont understand danish,
+        good luck translating. i also remember using one of the tracks titles as a title for an essay i did in danish that i got graded really poorly on',
+        'sneglzilla.jpg'),
+       (29, 'Toback To The Fromtime', 'Malk De Koijn', 2011, 'i think my favorite track on this one is Nalk,
+        but also good luck translating if u dont understand danish.', 'toback.jpg'),
+       (30, 'loveless', 'my bloody valentine', 1991, 'if anyone tells u this is their favorite album,
+        run as fast as u can. but also a goated album if ur into like shoegaze or noise in general', 'loveless.jpg'),
+       (31, '[α] & [β]', 'Hans Philip', 2022,
+        'im in love with his lyrics and voice on this album. very dreamy sounds. i got this the second it dropped',
+        'ab.jpg'),
+       (32, 'Cherry Bomb', 'Tyler,
+        The Creator', 2015, 'i think this is one of my favorite albums by tyler. some say its ass,
         but i really like u can hear he had fun making this, and i feel like it was way more experimental than his
-        previous works.i really like this one ',' cherrybomb.jpg '),(33,' Scum Fuck Flower Boy ',' Tyler,
-        The Creator',2017,'it may actually be named flower boy but i dont really care. this is my favorite tyler album of all time. he also helped he stay in the garden shed with this one. goated','flowerboy.jpg'),(34,'Goblin','Tyler,
-        The Creator',2011,'goblin... i got this one bcs of yonkers, no other reason.10 / 10 would purchase again ','
-        goblin.jpg '),(35,' IGOR ',' Tyler,
-        The Creator',2019,'i was so hyped when this came out. also the last tyler vinyl i would purchase (not really sure why, i have a feeling its because i ran into a financial hole that im still digging my self out of). didnt he make a really good grammy speech abt racism for this one?','igor.jpg'),(36,'Wolf','Tyler,
-        The Creator',2013,'got this one because there was a track with mr ocean and IFHY,
-        i dont really have any other emotional relations to this album','wolf.jpg'),(37,'Camp','Childish Gambino',2011,'i aquired this one because i was(am still) on a mission to get all of his released vinyls. it also has bonfire and heartbeat on,
-        which are bangers. not much else to say abt this one. havent heard it that much honestly','camp.jpg'),(38,'RTJ4','Run The Jewels',2020,'honestly... im not really sure why i bought this one,
+        previous works.i really like this one', 'cherrybomb.jpg'),
+       (33, ' Scum Fuck Flower Boy ', ' Tyler,
+        The Creator', 2017,
+        'it may actually be named flower boy but i dont really care. this is my favorite tyler album of all time. he also helped he stay in the garden shed with this one. goated',
+        'flowerboy.jpg'),
+       (34, 'Goblin', 'Tyler,
+        The Creator', 2011, 'goblin... i got this one bcs of yonkers, no other reason.10 / 10 would purchase again ',
+        'goblin.jpg'),
+       (35, ' IGOR ', ' Tyler,
+        The Creator', 2019,
+        'i was so hyped when this came out. also the last tyler vinyl i would purchase (not really sure why, i have a feeling its because i ran into a financial hole that im still digging my self out of). didnt he make a really good grammy speech abt racism for this one?',
+        'igor.jpg'),
+       (36, 'Wolf', 'Tyler,
+        The Creator', 2013, 'got this one because there was a track with mr ocean and IFHY,
+        i dont really have any other emotional relations to this album', 'wolf.jpg'),
+       (37, 'Camp', 'Childish Gambino', 2011, 'i aquired this one because i was(am still) on a mission to get all of his released vinyls. it also has bonfire and heartbeat on,
+        which are bangers. not much else to say abt this one. havent heard it that much honestly', 'camp.jpg'),
+       (38, 'RTJ4', 'Run The Jewels', 2020, 'honestly... im not really sure why i bought this one,
         i might\'ve been very drunk. good album, not one i listen to that often tho, so i dont really know what to say abt this one',
         'rtj4.jpg'),
        (39,
-        'People\'s Instinctive Travels and the Paths of Rythm','A Tribe Called Quest',1990,'i think this is my favorite atcq album ever. luck of lucien,
+        'People\'s Instinctive Travels and the Paths of Rythm', 'A Tribe Called Quest', 1990, 'i think this is my favorite atcq album ever. luck of lucien,
         i left my wallet in el segundo, bonita applebum,
-        can i kick it... just full of bangers and i love the whole story telling on this album. great purchase','poeplesinstinctive.jpg'),(40,'Funk Wav Bounces Vol.2','Calvin Harris',2022,'great album,
-        i was gifted this by my mom. ty mom <3. i am on a mission to aquire vol.1 as well but that shit is so expensive too','funkwav2.jpg'),(41,'99.9%','KAYTRANADA',2016,'THE first album i heard by kaytranda. and i LOVEEEE LOVE LOVEEE the album cover. full of bangers aswell','99.jpg'),(42,'Jazz Dispensary: The Dank D-Funk Blend,
-        Vol.2','Jazz Dispensary',2021,'compilation album. it\'s actually pretty fun and it has an AMAZING album cover. aquired on record store day at some point, and i got it purely based on the album cover. i think my favorite track is heat!.',
+        can i kick it... just full of bangers and i love the whole story telling on this album. great purchase',
+        'poeplesinstinctive.jpg'),
+       (40, 'Funk Wav Bounces Vol.2', 'Calvin Harris', 2022, 'great album,
+        i was gifted this by my mom. ty mom <3. i am on a mission to aquire vol.1 as well but that shit is so expensive too',
+        'funkwav2.jpg'),
+       (41, '99.9%', 'KAYTRANADA', 2016,
+        'THE first album i heard by kaytranda. and i LOVEEEE LOVE LOVEEE the album cover. full of bangers aswell',
+        '99.jpg'),
+       (42, 'Jazz Dispensary: The Dank D-Funk Blend,
+        Vol.2', 'Jazz Dispensary', 2021,
+        'compilation album. it\'s actually pretty fun and it has an AMAZING album cover. aquired on record store day at some point, and i got it purely based on the album cover. i think my favorite track is heat!.',
         'jazzd.jpg'),
        (43, 'Walk This Way', 'Run-D.M.C', 1986,
         'i was introduced to this song by mom in my early days, and i am pretty sure i got this single from my dads collection of vinyls and i stole it.',
@@ -139,22 +195,116 @@ VALUES (1, 'Greatest Hits', 'Gramsespektrum', 1998,
         'fiestacon.jpg'),
        (50, 'Axis: Bold As Love', 'Jimi Hendrix', 1967,
         'i was gifted this by 2 of my closest friends. its loud, its end 60\'s, its amazing,
-        its hendrix.','axis.jpg'),(51,'Are You Experienced','Jimi Hendrix',1967,'after getting my first jimi vinyl,
+        its hendrix.', 'axis.jpg'),
+       (51, 'Are You Experienced', 'Jimi Hendrix', 1967, 'after getting my first jimi vinyl,
         i had to get another one and this one had purple haze and hey joe on,
         so i decided to get this and listen to it in it\'s full extent.', 'areyou.jpg'),
        (52, 'Fiesta Tijuana', 'The Mexican Mariachi Brass', 1970,
-        'i basically got this for free at the bins at the thrift. i believe it\'s made by some germans. very fun mariachi music','fiestatijuana.jpg'),(53,'\"Awaken, My Love!\"','Childish Gambino',2016,'i remember the first time i listened to this and i had goosebumps from start till end. my favorite album by childish gambino and also one of my favorite albums of all time','awakenmylove.jpg'),(54,'Kauai','Childish Gambino',2014,'this reminds me of youthful summer. it\'s amazing and i love this album','kauai.jpg'),(55,'Greatest Hits II','The Temptations',1970,'bought this one because it has \"ball of confusion\" on it, and imo it\'s one of the greatest political songs ever produced and it is very much still relevant today. and the whole track also SLAPS','temptations.jpg'),(56,'Czarface Meets Ghostface','CZARFACE, Ghostface Killah',2019,'this was one of my first introductions to czarface\'s discography. i love his whole comic style villian aesthetic and sound','ghostface.jpg'),(57,'Super What?','CZARFACE, MF DOOM',2021,'a masterpiece by 2 legends, not much to say other than that','superwhat.jpg'),(58,'Never Can Say Goodbye','Gloria Gaynor',1975,'i have never actually listened to this vinyl. i found it in my dads collection and i decided to keep it solely because of her last name included \"gay\" in it','nevercan.jpg'),(59,'The Odd Czar Against Us','CZARFACE',2019,'i got this one because im obsessed with his whole asthetic, i dont rlly remember this album that great, but it makes for a great showpiece','oddczar.jpg'),(60,'Experience','Gloria Gaynor',1975,'like the other gloria vinyl i have; i have NEVER listened to this and i kept it because she has \"gay\" in her name. i imagine its some very gay disco, which i love. but havent taken time to hear it yet','experience.jpg'),(61,'Dansktop','Ukendt Kunstner',2023,'one of my favorite artists from denmark. i remember when they split back in like 2016, and hans philip went to release some of his own stuff. and then in all secret they had worked on this album and it dropped from one day to another. no warning, no release timer, no nothing. and they did it just to prove they are STILL the best there ever was in denmark','dansktop.jpg'),(62,'Forevigt','Hans Philip',2019,'this one is in my top 3 favorite albums of all time. it goes blonde, forevigt and then awaken my love. and in my opinion, hans is the danish equivalent of frank ocean. and im so frank deprived, and hans has filled that void','forevigt.jpg'),(63,'Dødens Triumf','The Savage Rose',2010,'was found in my dads collection... idk why i kept this one, i have never listened to it','dødenstriumf.jpg'),(64,'Unknown Pleasures','Joy Division',1979,'my favorite h&m album. it\'s really good and i mainly got this one because of raf simmon\'s relationship to this album and i needed to hear what the fuzz was about','unknownpleasures.jpg'),(65,'Something New','Barbi Benton',1976,'found this in my dads collection... again, not really sure why i kept this one as i have never listened to it nor plan to do so. the album cover is cool tho. kinda screams early 10\'s or late 00\'s','somethingnew.jpg'),(66,'Renegades','Rage Against The Machine',2000,'i had an obsession with ratm at some point. cool album cover. as i recall its from like robert indiana\'s love sculpture, or at least inspired by it','renegades.jpg'),(67,'The Battle Of Los Angeles','Rage Against The Machine',1999,'i think this album was my first introduction to ratm, AND if i recall correctly, it was my mom who introduced me','battleofla.jpg'),(68,'Rage Against The Machine','Rage Against The Machine',1992,'my favorite album by the band AND it also has THE hardest album cover ever','rageagainst.jpg'),(69,'Ultimate Trax','Various Artists',1986,'was found in my dads collection. i have only listened to it like once or maximum twice (shoutout alex for that banger of a bar btw). iirc its a disco mix, which is why i kept it','ultimatetrax.jpg'),(70,'Welcome To The Planet Of Bass','Maggotron',1988,'really cool album cover. found it in my dads collection and the disc is all messed up, so there\'s a few tracks u cant hear without it skipping, but really cool album cover','planetofbass.jpg'),(71,'Pandemonium','The Time',1990,'one of the funniest album covers i have witnessed. i believe this also borders on disco but i could be wrong. the disk is all messed up so i havent really heard it','pandemonium.jpg'),(72,'U Know What Time It Is','Grandmaster Flash',1987,'the gm, prolly the best dj to come out of the big america. a fun find i got myself','uknowwhattime.jpg'),(73,'Hard As Kryptonite','The Stonefunkers',1989,'early hiphop funk. no idea where they originate from, but the album cover was too funky not to keep when i saw this in my dads collection','hardas.jpg'),(74,'Too Low For Zero','Elton John',1983,'my brother bought this one, and gave it to me when i he realized that he doesnt listen to vinyls. i have never listened to this one, and i dont intend to. mr john, im sorry but im not into ur music like that','toolow.jpg'),(75,'The Rise And Fall Of Ziggy Stardust And The Spiders From Mars','David Bowie',1972,'the first time i truly listened to david, was after watching the martian, when that movie came out, and they played starman and i fell in love with his spacy themes and sounds. and i had to get this album afterwards','ziggy.jpg'),(76,'Live!','Bob Marley And The Wailers',1975,'nice cozy reggae. i am actually not sure why i bought this, or if i even did. might\'ve been found in my dads collection. i dont recall getting this one','live.jpg'),(77,'The Sound Of Los Angeles Records','Solar',1994,'a compilation of artists from los angeles? idk honestly. was found in my dads collection and decided to keep it and im not really sure if i ever listened to it','soundof.png'),(78,'West Street Mob','The Sugarhill Gang',1983,'i bought this one because i thought it had rappers delight on. it does not. still a fun album tho. im not really sure if i put in the correct name tho, it was hard to find','weststreet.jpg'),(79,'The Money Store','Death Grips',2012,'i\'ve seen footage. if u dont know death grips, stop sleeping under a stone, AND if u like industrial noise, i can recommend. also amazing album cover','moneystore.jpg'),(80,'Night Rider','Sonora Ponceña',1981,'i bought this purely because of the album cover, and i was fully expecting some cheesy 80\'s rock with a lot of electric guitar and synths... i was pleasantly surprised when salsa started coming out of my speakers. perhaps my funnest purchase','nightrider.jpg'),(81,'Red Army Ensemble','Red Army Ensemble',1963,'i bought this one cuz i thought it was funny at the store, and now im stuck with a vinyl filled with communistic military brass... why am i like this?','redarmy.jpg'),(82,'The Real Wild Remix','Raul Orellana',1989,'fun album cover. some nice instrumentals. the vocal is a bit, how do i say... musty. but very fun vinyl','realwild.jpg'),(83,'Champagne','Champagne',1977,'bought this purely based of their very camp album cover... music wise, they sound like temu version of abba, and i have only listened to the first 3 tracks and it will now be standing collecting dust','champagne.jpg'),(84,'Südamericana 3','Klaus Wunderlich',1976,'who let this german man into their studio 3 times to record this bossanova collection with his pop organ???? i had a great laugh before getting hit with a sharp ear pain and a headache that has stayed ever since the 3rd track. pls dont let this man record any more of this','klaus.jpg');
-/*!40000 ALTER TABLE `vinyls` ENABLE KEYS */;
+        'i basically got this for free at the bins at the thrift. i believe it\'s made by some germans. very fun mariachi music',
+        'fiestatijuana.jpg'),
+       (53, '\"Awaken, My Love!\"', 'Childish Gambino', 2016,
+        'i remember the first time i listened to this and i had goosebumps from start till end. my favorite album by childish gambino and also one of my favorite albums of all time',
+        'awakenmylove.jpg'),
+       (54, 'Kauai', 'Childish Gambino', 2014,
+        'this reminds me of youthful summer. it\'s amazing and i love this album', 'kauai.jpg'),
+       (55, 'Greatest Hits II', 'The Temptations', 1970,
+        'bought this one because it has \"ball of confusion\" on it, and imo it\'s one of the greatest political songs ever produced and it is very much still relevant today. and the whole track also SLAPS',
+        'temptations.jpg'),
+       (56, 'Czarface Meets Ghostface', 'CZARFACE, Ghostface Killah', 2019,
+        'this was one of my first introductions to czarface\'s discography. i love his whole comic style villian aesthetic and sound',
+        'ghostface.jpg'),
+       (57, 'Super What?', 'CZARFACE, MF DOOM', 2021, 'a masterpiece by 2 legends, not much to say other than that',
+        'superwhat.jpg'),
+       (58, 'Never Can Say Goodbye', 'Gloria Gaynor', 1975,
+        'i have never actually listened to this vinyl. i found it in my dads collection and i decided to keep it solely because of her last name included \"gay\" in it',
+        'nevercan.jpg'),
+       (59, 'The Odd Czar Against Us', 'CZARFACE', 2019,
+        'i got this one because im obsessed with his whole asthetic, i dont rlly remember this album that great, but it makes for a great showpiece',
+        'oddczar.jpg'),
+       (60, 'Experience', 'Gloria Gaynor', 1975,
+        'like the other gloria vinyl i have; i have NEVER listened to this and i kept it because she has \"gay\" in her name. i imagine its some very gay disco, which i love. but havent taken time to hear it yet',
+        'experience.jpg'),
+       (61, 'Dansktop', 'Ukendt Kunstner', 2023,
+        'one of my favorite artists from denmark. i remember when they split back in like 2016, and hans philip went to release some of his own stuff. and then in all secret they had worked on this album and it dropped from one day to another. no warning, no release timer, no nothing. and they did it just to prove they are STILL the best there ever was in denmark',
+        'dansktop.jpg'),
+       (62, 'Forevigt', 'Hans Philip', 2019,
+        'this one is in my top 3 favorite albums of all time. it goes blonde, forevigt and then awaken my love. and in my opinion, hans is the danish equivalent of frank ocean. and im so frank deprived, and hans has filled that void',
+        'forevigt.jpg'),
+       (63, 'Dødens Triumf', 'The Savage Rose', 2010,
+        'was found in my dads collection... idk why i kept this one, i have never listened to it', 'dødenstriumf.jpg'),
+       (64, 'Unknown Pleasures', 'Joy Division', 1979,
+        'my favorite h&m album. it\'s really good and i mainly got this one because of raf simmon\'s relationship to this album and i needed to hear what the fuzz was about',
+        'unknownpleasures.jpg'),
+       (65, 'Something New', 'Barbi Benton', 1976,
+        'found this in my dads collection... again, not really sure why i kept this one as i have never listened to it nor plan to do so. the album cover is cool tho. kinda screams early 10\'s or late 00\'s',
+        'somethingnew.jpg'),
+       (66, 'Renegades', 'Rage Against The Machine', 2000,
+        'i had an obsession with ratm at some point. cool album cover. as i recall its from like robert indiana\'s love sculpture, or at least inspired by it',
+        'renegades.jpg'),
+       (67, 'The Battle Of Los Angeles', 'Rage Against The Machine', 1999,
+        'i think this album was my first introduction to ratm, AND if i recall correctly, it was my mom who introduced me',
+        'battleofla.jpg'),
+       (68, 'Rage Against The Machine', 'Rage Against The Machine', 1992,
+        'my favorite album by the band AND it also has THE hardest album cover ever', 'rageagainst.jpg'),
+       (69, 'Ultimate Trax', 'Various Artists', 1986,
+        'was found in my dads collection. i have only listened to it like once or maximum twice (shoutout alex for that banger of a bar btw). iirc its a disco mix, which is why i kept it',
+        'ultimatetrax.jpg'),
+       (70, 'Welcome To The Planet Of Bass', 'Maggotron', 1988,
+        'really cool album cover. found it in my dads collection and the disc is all messed up, so there\'s a few tracks u cant hear without it skipping, but really cool album cover',
+        'planetofbass.jpg'),
+       (71, 'Pandemonium', 'The Time', 1990,
+        'one of the funniest album covers i have witnessed. i believe this also borders on disco but i could be wrong. the disk is all messed up so i havent really heard it',
+        'pandemonium.jpg'),
+       (72, 'U Know What Time It Is', 'Grandmaster Flash', 1987,
+        'the gm, prolly the best dj to come out of the big america. a fun find i got myself', 'uknowwhattime.jpg'),
+       (73, 'Hard As Kryptonite', 'The Stonefunkers', 1989,
+        'early hiphop funk. no idea where they originate from, but the album cover was too funky not to keep when i saw this in my dads collection',
+        'hardas.jpg'),
+       (74, 'Too Low For Zero', 'Elton John', 1983,
+        'my brother bought this one, and gave it to me when i he realized that he doesnt listen to vinyls. i have never listened to this one, and i dont intend to. mr john, im sorry but im not into ur music like that',
+        'toolow.jpg'),
+       (75, 'The Rise And Fall Of Ziggy Stardust And The Spiders From Mars', 'David Bowie', 1972,
+        'the first time i truly listened to david, was after watching the martian, when that movie came out, and they played starman and i fell in love with his spacy themes and sounds. and i had to get this album afterwards',
+        'ziggy.jpg'),
+       (76, 'Live!', 'Bob Marley And The Wailers', 1975,
+        'nice cozy reggae. i am actually not sure why i bought this, or if i even did. might\'ve been found in my dads collection. i dont recall getting this one',
+        'live.jpg'),
+       (77, 'The Sound Of Los Angeles Records', 'Solar', 1994,
+        'a compilation of artists from los angeles? idk honestly. was found in my dads collection and decided to keep it and im not really sure if i ever listened to it',
+        'soundof.png'),
+       (78, 'West Street Mob', 'The Sugarhill Gang', 1983,
+        'i bought this one because i thought it had rappers delight on. it does not. still a fun album tho. im not really sure if i put in the correct name tho, it was hard to find',
+        'weststreet.jpg'),
+       (79, 'The Money Store', 'Death Grips', 2012,
+        'i\'ve seen footage. if u dont know death grips, stop sleeping under a stone, AND if u like industrial noise, i can recommend. also amazing album cover',
+        'moneystore.jpg'),
+       (80, 'Night Rider', 'Sonora Ponceña', 1981,
+        'i bought this purely because of the album cover, and i was fully expecting some cheesy 80\'s rock with a lot of electric guitar and synths... i was pleasantly surprised when salsa started coming out of my speakers. perhaps my funnest purchase',
+        'nightrider.jpg'),
+       (81, 'Red Army Ensemble', 'Red Army Ensemble', 1963,
+        'i bought this one cuz i thought it was funny at the store, and now im stuck with a vinyl filled with communistic military brass... why am i like this?',
+        'redarmy.jpg'),
+       (82, 'The Real Wild Remix', 'Raul Orellana', 1989,
+        'fun album cover. some nice instrumentals. the vocal is a bit, how do i say... musty. but very fun vinyl',
+        'realwild.jpg'),
+       (83, 'Champagne', 'Champagne', 1977,
+        'bought this purely based of their very camp album cover... music wise, they sound like temu version of abba, and i have only listened to the first 3 tracks and it will now be standing collecting dust',
+        'champagne.jpg'),
+       (84, 'Südamericana 3', 'Klaus Wunderlich', 1976,
+        'who let this german man into their studio 3 times to record this bossanova collection with his pop organ???? i had a great laugh before getting hit with a sharp ear pain and a headache that has stayed ever since the 3rd track. pls dont let this man record any more of this',
+        'klaus.jpg');
+/*!40000 ALTER TABLE `vinyls`
+    ENABLE KEYS */;
 UNLOCK
-TABLES;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+    TABLES;
+/*!40103 SET TIME_ZONE = @OLD_TIME_ZONE */;
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/*!40101 SET SQL_MODE = @OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS = @OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS = @OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT = @OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS = @OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION = @OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES = @OLD_SQL_NOTES */;
 
 -- Dump completed on 2026-10-22 18:29:30
