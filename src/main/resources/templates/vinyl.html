@@ -15,7 +15,7 @@
             <h1 th:text="${vinyl.albumName}">album name:</h1>
             <div class="vinylContainer">
                 <div class="vinylShow">
-                <img class="vinylImage" th:src="@{'/img/' + ${vinyl.img}}" alt="vinyl image"/>
+                <img class="vinylImage" th:src="@{'/img/vinyls/' + ${vinyl.img}}" alt="vinyl image"/>
                 <div>
                     <label>album name:</label>
                     <span th:text="${vinyl.albumName}">album name</span>
@@ -34,7 +34,7 @@
                     <label>thoughts abt album:</label>
                     <span th:text="${vinyl.story}">my thoughts</span>
                 </div>
-                <a th:onclick="window.history.go(-1)"><img th:src="@{'/img/goBack.png'}" alt="go back"></a>
+                <a th:onclick="window.history.go(-1)"><img th:src="@{'/img/buttons/goBack.png'}" alt="go back"></a>
                 </div>
             </div>
         </main>

@@ -16,7 +16,7 @@
             <h1>MY VINYL LIBRARY :3</h1>
             <div class="vinylContainer">
                 <div class="vinylBox" th:each="vinyl : ${vinylList}">
-                    <img th:src="@{'/img/' + ${vinyl.img}}" alt="vinyl image"/>
+                    <img th:src="@{'/img/vinyls/' + ${vinyl.img}}" alt="vinyl image"/>
                     <div>
                         <label>album name:</label>
                         <span th:text="${vinyl.albumName}">album name</span>
@@ -33,7 +33,7 @@
                     </div>
                     <form th:action="@{/showVinyl}" th:method="get">
                         <input type="hidden" name="id" th:value="${vinyl.getId}" placeholder="Enter id to read" required>
-                        <input type="image" th:src="@{'/img/Show_vinyl.png'}" alt="Submit">
+                        <input type="image" th:src="@{'/img/buttons/Show_vinyl.png'}" alt="Submit">
                     </form>
                 </div>
             </div>

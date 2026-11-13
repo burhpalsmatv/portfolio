@@ -28,7 +28,7 @@ logging off for today...
 **22/10/2026**
 
 got this shit to work on my desktop after a long fight.
-i added a new database.sql file which will now be the new sql script, so use that one.
+i added a new vinylDbScript.sql file which will now be the new sql script, so use that one.
 
 i played some aram mayham to get a small break. i added a custom button that can show a single vinyl with the story attached and a custom go back button.
 and i reformated some shit on the page.
@@ -37,6 +37,7 @@ and i reformated some shit on the page.
 logging off for the day
 
 **28/10/2026**
+
 i did some minor edits in the sql script (i havent decided yet if i want to delete the "databasescript.sql" file)
 i am now gonna try and make the header as fragment.
 
@@ -44,3 +45,10 @@ u can now go back to ur previous location after visiting a vinyl
 
 
 quick sesh, signing off
+
+**2/10/2026**
+
+gonna be a quick sesh again today.
+
+i did some sorting for the image packages. i think i might play around with choosing a font i like.
+
