@@ -6,12 +6,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
-public class PortfolioApplication extends SpringBootServletInitializer {
-
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(PortfolioApplication.class);
-    }
+public class PortfolioApplication{
 
     public static void main(String[] args) {
         SpringApplication.run(PortfolioApplication.class, args);
